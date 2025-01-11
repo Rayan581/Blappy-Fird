@@ -94,3 +94,10 @@ bool Pipes::checkCollision(Vector2 birdPos)
     }
     return false;
 }
+
+void Pipes::Reset()
+{
+    pipes.clear();
+    addPipe();
+    lastSpawnTime = GetTime();
+}

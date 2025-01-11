@@ -19,7 +19,7 @@ int main()
 
         // 3. Drawing
         BeginDrawing();
-        ClearBackground(BLACK);
+        ClearBackground(SKYBLUE);
         game.Draw();
 
         EndDrawing();

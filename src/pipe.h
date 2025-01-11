@@ -29,4 +29,5 @@ public:
     void Draw();
     void Update(Vector2 birdPos, int &score, bool &scoreUpdated);
     bool checkCollision(Vector2 birdPos);
+    void Reset();
 };

@@ -9,8 +9,8 @@ void Game::InitGame()
     score = 0;
     gameOver = false;
     scoreUpdated = true;
-    bird = Bird(15);
-    pipes = Pipes();
+    bird.Reset();
+    pipes.Reset();
 }
 
 void Game::Update()
