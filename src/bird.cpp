@@ -7,7 +7,7 @@ Bird::Bird()
     position = Vector2{100, (float)GetScreenHeight() / 2};
     power = 15;
     gravity = 0;
-    texture = LoadTexture("assets/images/bird1.png");
+    texture = LoadTexture("assets/images/bird.png");
 }
 
 Bird::~Bird()
