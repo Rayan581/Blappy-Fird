@@ -10,10 +10,14 @@ private:
     Pipes pipes;
     int score;
     bool scoreUpdated;
+    bool gameOver;
+    bool scoreSaved;
+
+    int getHighScore();
+    void DrawScore();
+    void SaveScore();
 
 public:
-    bool gameOver;
-
     Game();
     void InitGame();
     void Update();

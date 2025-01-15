@@ -28,6 +28,6 @@ public:
     Pipes();
     void Draw();
     void Update(Vector2 birdPos, int &score, bool &scoreUpdated);
-    bool checkCollision(Vector2 birdPos);
+    bool checkCollision(Vector2 birdPos, float birdSize);
     void Reset();
 };

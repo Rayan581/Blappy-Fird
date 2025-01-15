@@ -1,6 +1,5 @@
 #include "bird.h"
 #include <raylib.h>
-#include <iostream>
 
 Bird::Bird()
 {
@@ -8,17 +7,22 @@ Bird::Bird()
     power = 15;
     gravity = 0;
     texture = LoadTexture("assets/images/bird.png");
+    size = 40;
 }
 
 Bird::~Bird()
 {
     UnloadTexture(texture);
-    std::cout << "THis cled" << std::endl;
 }
 
 Vector2 Bird::GetPosition() const
 {
     return position;
+}
+
+float Bird::GetSize() const
+{
+    return size;
 }
 
 void Bird::Update()
@@ -32,7 +36,7 @@ void Bird::Update()
 
 void Bird::Draw()
 {
-    DrawTextureV(texture, position, WHITE);
+    DrawTexturePro(texture, Rectangle{0, 0, (float)texture.width, (float)texture.height}, Rectangle{position.x, position.y, size, size}, Vector2{0, 0}, 0.0f, WHITE);
 }
 
 void Bird::Reset()

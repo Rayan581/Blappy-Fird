@@ -1,7 +1,6 @@
 #include "pipe.h"
 #include <raylib.h>
 #include <algorithm>
-#include <iostream>
 
 void Pipes::Pipe::Draw()
 {
@@ -84,11 +83,11 @@ void Pipes::Update(Vector2 birdPos, int &score, bool &scoreUpdated)
     updateScore(birdPos, score, scoreUpdated);
 }
 
-bool Pipes::checkCollision(Vector2 birdPos)
+bool Pipes::checkCollision(Vector2 birdPos, float birdSize)
 {
     for (auto &pipe : pipes)
     {
-        if (CheckCollisionCircleRec(Vector2{float(birdPos.x + 32), float(birdPos.y + 32)}, 32, Rectangle{pipe.position.x, pipe.position.y, 100, (float)pipe.length}))
+        if (CheckCollisionCircleRec(Vector2{float(birdPos.x + birdSize), float(birdPos.y + birdSize)}, birdSize, Rectangle{pipe.position.x, pipe.position.y, 100, (float)pipe.length}))
             // Collision detected
             return true;
     }
